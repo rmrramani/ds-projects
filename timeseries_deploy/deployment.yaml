@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goldprice-deployment
+  labels:
+    app: goldprice-container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goldprice-container
+  template:
+    metadata:
+      labels:
+        app: goldprice-container
+    spec:
+      containers:
+      - name: goldprice-container
+        image: python-gpapp
+        ports:
+        - containerPort: 8080

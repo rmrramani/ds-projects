@@ -1,0 +1,17 @@
+<h1 style="color:green">GOLD PRICE APP RUNNING</h1>
+<h2 style="color:blue">Please enter today gold price below:</h2>
+<form  method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.firstday_price.label }} {{form.firstday_price}}
+    <br>
+    {{ form.secondday_price.label }} {{form.secondday_price}}
+    <br>
+    {{ form.thirdday_price.label }} {{form.thirdday_price}}
+    <br>
+    {{ form.fourthday_price.label }} {{form.fourthday_price}}
+    <br>
+    {{ form.fifthday_price.label }} {{form.fifthday_price}}
+    <br>
+    {{ form.submit() }}
+</form>

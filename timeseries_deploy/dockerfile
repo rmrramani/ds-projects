@@ -1,0 +1,10 @@
+#DockerFile, Image, Container
+FROM python:3.7.6
+
+WORKDIR /gp-app
+
+COPY . .
+
+RUN pip install numpy==1.16.5 Flask==2.0.2 Flask-WTF==1.0.0 WTForms==3.0.1 scikit-learn==0.20.3
+
+CMD [ "python","./main.py","--host=0.0.0.0"]

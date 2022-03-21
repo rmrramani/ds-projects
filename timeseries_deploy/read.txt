@@ -1,0 +1,3 @@
+#data collection 
+#model selection #using grid search for different parameters
+#Docker file creation 
